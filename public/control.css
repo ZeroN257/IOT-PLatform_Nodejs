@@ -1,0 +1,43 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    padding-top: 50px; /* Add space for fixed navbar */
+}
+
+h1 {
+    text-align: center;
+    color: #007bff;
+    margin-bottom: 30px;
+}
+
+#deviceContainer {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.deviceDiv {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    background-color: #ffffff;
+}
+
+.deviceDiv h3 {
+    color: #007bff;
+}
+
+.deviceDiv button {
+    margin-top: 10px;
+}
+
+.range-control {
+    width: 100%;
+}
+
+a {
+    display: block;
+    margin-top: 20px;
+    text-align: center;
+    color: #007bff;
+}
