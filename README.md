@@ -15,7 +15,7 @@
 <p>To run this project, you need to have Node.js and MongoDB installed on your system.</p>
 <ol>
 <li>Clone the repository:</li>
-<pre><code>git clone [repository_url]</code></pre>
+<pre><code>git clone https://github.com/ZeroN257/IOT-PLatform.git</code></pre>
 <li>Install dependencies:</li>
 <pre><code>npm install</code></pre>
 <li>Start the server:</li>
