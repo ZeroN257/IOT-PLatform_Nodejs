@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <!-- Add Bootstrap stylesheet link -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="login.css">
+</head>
+<body class="container mt-5">
+    <h1>Login</h1>
+    <form id="loginForm">
+        <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" class="form-control" id="username" name="username" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" class="form-control" id="password" name="password" required>
+        </div>
+        <button type="button" class="btn btn-primary" onclick="loginUser()">Login</button>
+    </form>
+
+    <script>
+        async function loginUser() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+        
+            const response = await fetch('/api/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ username, password }),
+            });
+        
+            const data = await response.json();
+        
+            if (response.ok) {
+                localStorage.setItem('username', data.username);
+                window.location.href = '/dashboard'; // Redirect to the dashboard
+            } else {
+                alert(data.message);
+            }
+        }
+    </script>
+
+    <!-- Add Bootstrap JavaScript and Popper.js scripts at the end of the body -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>

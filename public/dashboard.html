@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <!-- Add Bootstrap stylesheet link -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="dashboard.js" defer></script>
+</head>
+<body class="container mt-5">
+    <h1 class="mb-4">Hello <span id="username"></span></h1>
+    <p>Welcome to your dashboard!</p>
+
+    <h2 class="mt-4">Device Information</h2>
+    <div id="deviceContainer" class="mb-3">
+        <!-- Devices will be added here dynamically -->
+    </div>
+
+    <div class="form-row">
+        <div class="col-8">
+            <input type="text" class="form-control" id="deviceName" placeholder="Device Name">
+        </div>
+        <div class="col-4">
+            <select class="form-control" id="deviceList">
+                <option value="Led">Led</option>
+                <option value="DHT11">DHT11</option>
+                <option value="Servo">Servo</option>
+                <option value="Potentiometer">Potentiometer</option>
+                <!-- Add more device options as needed -->
+            </select>
+        </div>
+    </div>
+
+    <button class="btn btn-primary mt-3" onclick="addDevice()">Add Device</button>
+    <button class="btn btn-success mt-3" onclick="saveDevices()">Save Devices</button>
+    <button class="btn btn-info mt-3" onclick="goToControlPage()">Go to Control Page</button>
+
+    <a href="/" class="btn btn-danger mt-3">Logout</a>
+</body>
+</html>
