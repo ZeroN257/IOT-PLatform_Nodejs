@@ -1,4 +1,11 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IoT Platform README</title>
+</head>
+<body>
     <h1>IoT Platform</h1>
     <p>This project is an IoT (Internet of Things) platform developed using Node.js and Express.js. It enables users to register, login, manage devices, and control them remotely using MQTT (Message Queuing Telemetry Transport) protocol.</p>
 
@@ -48,3 +55,5 @@
 
     <h2>License</h2>
     <p>This project is licensed under the MIT License.</p>
+</body>
+</html>
